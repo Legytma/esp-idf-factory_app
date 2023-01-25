@@ -1,0 +1,43 @@
+## IDF Component Manager Manifest File
+
+# Version of the component [Required]
+# It should follow https://semver.org/spec/v2.0.0.html spec.
+version: "1.0.0"
+
+# List of supported targets [Optional]
+# If missing all targets are considered to be supported
+targets:
+  - esp32
+  - esp32s3
+
+# Short description for the project [Recommended]
+description: Factory App
+# Github repo or a home  [Recommended]
+url: https://github.com/Legytma/esp-idf-factory_app.git
+
+# List of dependencies [Optional]
+# All dependencies of the component should be published in the same registry.
+dependencies:
+  ## Required IDF version
+  idf:
+    version: ">=4.1.0"
+
+  # Put list of dependencies here
+  espressif/mdns:
+    version: "~1.0.5"
+    rules: # will add "optional_component" only when all if clauses are True
+      - if: "idf_version >=5.0" # supports all SimpleSpec grammars (https://python-semanticversion.readthedocs.io/en/latest/reference.html#semantic_version.SimpleSpec)
+  espressif/rmaker_common: "~1.1.0"
+  Legytma/log_utils:
+    # version: ~1.0.0
+    git: ssh://git@github.com:Legytma/esp-idf-log-utils.git
+  Legytma/gpi:
+    # version: ~1.0.0
+    git: ssh://git@github.com:Legytma/esp-idf-gpi.git
+  Legytma/gpi_reset_button:
+    # version: ~1.0.0
+    git: ssh://git@github.com:Legytma/esp-idf-gpi-reset-button.git
+  # Legytma/tobogan_semaphore:
+  #   # version: ~1.0.0 # if there is no `override_path` field, use component from registry
+  #   # override_path: ../tobogan_semaphore
+  #   path: ../tobogan_semaphore
