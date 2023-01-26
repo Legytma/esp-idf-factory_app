@@ -30,14 +30,10 @@ dependencies:
   espressif/rmaker_common: "~1.1.0"
   Legytma/log_utils:
     # version: ~1.0.0
-    git: ssh://git@github.com:Legytma/esp-idf-log-utils.git
+    git: https://github.com/Legytma/esp-idf-log-utils.git
   Legytma/gpi:
     # version: ~1.0.0
-    git: ssh://git@github.com:Legytma/esp-idf-gpi.git
+    git: https://github.com/Legytma/esp-idf-gpi.git
   Legytma/gpi_reset_button:
     # version: ~1.0.0
-    git: ssh://git@github.com:Legytma/esp-idf-gpi-reset-button.git
-  # Legytma/tobogan_semaphore:
-  #   # version: ~1.0.0 # if there is no `override_path` field, use component from registry
-  #   # override_path: ../tobogan_semaphore
-  #   path: ../tobogan_semaphore
+    git: https://github.com/Legytma/esp-idf-gpi-reset-button.git
